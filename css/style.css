@@ -1,0 +1,722 @@
+/* Global CSS Variables */
+
+:root {
+--background-color1: #000000;
+--background-color2: rgba(255, 255, 255, 0.10); 
+--background-color3: rgba(255, 255, 255, 0.2);
+--background-color4: rgba(0, 0, 0, 0.368);
+
+
+--nav-bg: rgba(255, 255, 255, 0.1);
+--nav-border: rgba(255, 255, 255, 0.25);
+--gradient1: linear-gradient(90deg, #ff8a00, #d12323);
+--gradient2: linear-gradient(#000000, #000000);
+
+
+--accent-color: #ff8a00;
+
+--font-color1: #fff;
+--font-color2: #f3950b;
+--font-color3: #d12323;
+--font-color4: #e3dfe3;
+--font-color5: rgba(255, 255, 255, 0.6);
+
+--drop-shadow1:drop-shadow(0 0 6px #f3950b) drop-shadow(0 0 10px #d12323);
+--bx-shadow1: rgba(0, 0, 0, 0.302);
+--bx-shadow2: rgba(255, 255, 255, 0.15);
+--bx-shadow3: rgba(241, 100, 0, 0.4);
+--bx-shadow4: rgba(209, 35, 35, 0.5);
+--bx-shadow5: rgba(209, 20, 20, 0.616);
+--bx-shadow6: rgba(243, 150, 11, 0.616);
+--bx-shadow7: rgba(209, 35, 35, 0.197);
+
+
+--bd-color1: rgba(255, 255, 255, 0.2);
+--bd-color2: rgb(204, 204, 204);
+--bd-color3: rgba(255, 255, 255, 0.5);
+--bd-color4: #f3950b;
+--bd-bottom1: rgba(255, 255, 255, 0.15);
+
+
+}
+
+/* General Reset and Font */
+* {
+  box-sizing: border-box;
+  font-family:Inter, system-ui, sans-serif; 
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 150vh;
+  padding-top: 100px;
+  background-color: var(--background-color1);
+}
+
+                        /* NAVIGATION */
+
+.navbar {
+  width: 100%;
+  padding: 0.8rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: var(--background-color1);
+  box-shadow: 0 2px 5px var(--bx-shadow1);
+  border-bottom: 1px solid var(--bd-bottom1);
+}
+
+.navdiv {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+}
+
+/* JOMACS Logo */
+.header_logo img {
+  display: block;
+  
+}
+
+/* JOMACS Logo (hover pop effect) */
+.header_logo img {
+  transition: transform 0.9s ease, filter 0.3s ease;
+}
+
+.header_logo img:hover {
+  transform: scale(1.1);
+  filter: var(--drop-shadow1);
+}
+
+
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: var(--font-color1);
+  position: relative;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Navigation Link (hover effect)*/
+
+.nav-links a:hover {
+  background: var(--gradient1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+ background: var(--gradient1);
+  transition: width 0.5s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Hamburger Menu  */
+
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background: var(--gradient1);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+
+
+                              /* FORM */        
+/* ================================================================ */
+
+/* Form Conatiner (With Blur Effect) */
+.container {
+  width: 500px;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  max-width: 100%;
+  background: var(--background-color2);
+  border: 1px solid var(--bd-color1); 
+  box-shadow: 0 4px 20px var(--bx-shadow2);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px); 
+}
+
+
+
+/* Form Title */
+
+h2 {
+  text-align: center;
+  color: var(--font-color1);
+  margin-bottom: 1.5rem;
+}
+
+
+/* Gradient Effect for Text */
+
+.gradient-text {
+  background: var(--gradient1);
+  background-clip: text; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold; 
+}
+
+
+/* Form Layout */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fieldset */
+
+fieldset {
+  border: .8px solid var(--bd-color1);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Legend */
+
+legend {
+  font-weight: bold;
+  text-align: center;
+  color: var(--font-color1);
+}
+
+/* Labels */
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: var(--font-color1);
+}
+
+/* Inputs */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.6rem;
+  border: 1px solid var(--bd-color2);
+  border-radius: 10px;
+  transition: border-color 0.3s ease;
+  font-size: 1rem;
+  background-color:  var(--background-color3);
+}
+
+
+/* Input (Placeholder) */
+
+input::placeholder
+ {
+  color: var(--font-color5); 
+  transition: all 0.3s ease;
+}
+
+
+/* Input - styling (gradient effect) */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus
+ {
+  outline: none;
+  border: 2px solid transparent;
+  color: var(--font-color1);
+  background:
+    var(--gradient2) padding-box,
+    var(--gradient1) border-box;
+}
+
+/* Input (Placeholder) - styling (gradient effect)*/
+
+input:focus::placeholder {
+  background: var(--gradient1);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: color 0.5s ease;
+}
+
+
+
+
+/* DATE FIELD*/
+
+input[type="date"] {
+  position: relative;
+  width: 100%;
+  padding: 0.6rem;
+  margin-top: 0.3rem;
+  border: 1px solid var(--bd-color2);
+  border-radius: 10px;
+  transition: all 0.4s ease;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color: var(--background-color3) ;
+  color: var(--font-color1);
+}
+
+/* Date Field (styling of date, month & year placeholder)*/
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field {
+  
+  color: var(--font-color5) ;
+}
+
+          /* Calendar icon - styling */
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(75%) brightness(85%); 
+  opacity: 0.7;
+  cursor: pointer;
+  transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+/*Calendar Icon (hover & focus effect) */
+input[type="date"]:hover::-webkit-calendar-picker-indicator,
+input[type="date"]:focus::-webkit-calendar-picker-indicator {
+  filter: invert(86%) sepia(75%) saturate(250%) hue-rotate(5deg) brightness(110%);
+  opacity: 1;
+}
+
+/* Date Input - styling */
+input[type="date"]:focus {
+  outline: none;
+  border: 2px solid transparent;
+  color: var(--font-color1);
+  background:
+    var(--gradient2) padding-box,
+    var(--gradient1) border-box;
+
+}
+
+/* Date Text (On Focus)*/
+input[type="date"]:focus::-webkit-datetime-edit,
+input[type="date"]:focus::-webkit-datetime-edit-text,
+input[type="date"]:focus::-webkit-datetime-edit-month-field,
+input[type="date"]:focus::-webkit-datetime-edit-day-field,
+input[type="date"]:focus::-webkit-datetime-edit-year-field {
+  background: var(--gradient1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+                  /* GENDER */
+
+
+/* Radio Buttons */
+input[type="radio"] {
+  appearance: none; 
+  outline: none;
+  background: transparent;
+  vertical-align: middle;
+  border: 2px solid var(--bd-color3);
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Radio Button (hover & focus effect) */
+input[type="radio"]:hover,
+input[type="radio"]:focus {
+  border-color: var(--bd-color4);
+  box-shadow: 0 0 6px var(--bx-shadow3);
+  cursor: pointer;
+}
+
+/* Radio Button (gradient effect when checked) */
+input[type="radio"]:checked {
+  padding: 3px;
+  border: 2px solid transparent;
+  background-image: var(--gradient1);
+  background-clip: content-box, border-box;
+  box-shadow: 0 0 8px var(--bx-shadow4);
+}
+
+/* Gender  */
+
+.gender-group {
+  margin-top: 1.5rem;
+  color: var(--font-color1)
+}
+
+.gender-group span {
+  display: block;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+}
+
+.gender-group label {
+  margin-right: 1rem;
+}
+
+
+
+/* MEMBERSHIP TYPE (Dropdown) */
+
+select {
+color: var(--font-color5);
+cursor: default;
+}
+
+/* Membership Type (Dropdown) (focus - gradient effect)  */
+
+select:focus {
+  border: 2px solid transparent;
+   background:
+    var(--gradient2) padding-box,
+    var(--gradient1) border-box;
+   color: var(--font-color1); 
+  outline: none;
+}
+
+/* Membership Type (Dropdown Options) */
+select:focus option {
+appearance: none;
+cursor: pointer;
+  background: var(--background-color1);
+  color: var(--font-color1);
+}
+
+/* Membership Type (Dropdown) (focus effect - gradient )  */
+select:hover,
+select:focus {
+  cursor: pointer;
+  border: 1px solid transparent;
+  color:var(--font-color1);
+  background-image: var(--gradient1);
+  box-shadow: 0 0 10px var(--bx-shadow3);
+}
+
+
+
+/* Newsletter Subscription (Checkbox) */
+
+.newsletter {
+  margin: 1rem 0;
+}
+
+/* Checkbox - styling*/
+
+input[type="checkbox"] {
+  appearance: none;
+  outline: none;
+  vertical-align: middle;
+  background: transparent;
+  border: 2px solid var(--bd-color3);
+  border-radius: 4px;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  transition: all 0.3s ease;
+}
+
+/*  Checkbox (hover & focus effect) */
+
+input[type="checkbox"]:hover,
+input[type="checkbox"]:focus {
+  border-color: var(--bd-color4);
+  box-shadow: 0 0 6px var(--bx-shadow3);
+}
+
+/*  Checkbox (fill effect - gradient) */
+
+input[type="checkbox"]:checked {
+  position: relative;
+  border: 2px solid transparent;
+  background-image: var(--gradient1);
+  box-shadow: 0 0 8px var(--bx-shadow4);
+}
+
+/* Checkbox (Checkmark) */
+input[type="checkbox"]:checked::after {
+  content: '✔';
+  font-size: 12px;
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  color: var(--font-color1);
+}
+
+
+                        /*BUTTONS*/
+
+
+/* Buttons (General Styling) */
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+button {
+  flex: 1;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--font-color1);
+}
+
+/* Submit Button (gradient effect)*/
+
+button[type="submit"] {
+ background-image: var(--gradient1);
+  box-shadow: 0 4px 10px var(--bx-shadow7) ;
+}
+
+/* Submit Button (hover effect -gradient)*/
+
+button[type="submit"]:hover {
+  background-image: var(--gradient1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px var(--bx-shadow6);
+}
+
+/* Reset Button */
+
+ button[type="reset"] {
+  position: relative;
+  border: none; 
+  background: transparent;
+  color: var(--font-color1);
+  border-radius: 10px; 
+  padding: 0.8rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Reset Button (border styling)*/
+
+button[type="reset"]::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  padding: 1.5px;
+  background:  var(--gradient1);
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* Reset Button (hover effect - gradient) */
+
+button[type="reset"]:hover {
+  background: var(--gradient1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px var(--bx-shadow5);
+}
+
+
+
+/* Responsive Design */
+
+@media (max-width: 600px) {
+  .container {
+    width: 100%;
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  label,
+  legend {
+    font-size: 0.95rem;
+  }
+
+  input,
+  textarea,
+  select {
+    font-size: 0.95rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
+
+
+/* --- Mobile Styling --- */
+@media (max-width: 600px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background: var(--background-color4);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid var(--nav-border);
+    display: none;
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--font-color4);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+    
+  }
+
+  .nav-links li a {
+    color: var(--font-color4);
+    background: var(--font-color1);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Animate hamburger into X */
+  .menu-toggle.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .menu-toggle.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+/* THANK YOU PAGE*/
+
+.thankyou-container {
+  padding: 2rem;
+  border-radius: 12px;
+  width: 600px;
+  max-width: 100%;
+  text-align: center;
+  margin: 5rem auto;
+  background: var(--background-color2);
+  box-shadow: 0 4px 12px var(--bx-shadow1);
+}
+
+.thankyou-container h1 {
+  color: var(--font-color1);
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.thankyou-container p {
+  color: var(--font-color1);
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+
+/* Thank You Page ('Back to Form' Button)*/
+
+.back-btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.3s ease;
+  color: var(--font-color1);
+background: var(--gradient1);
+  box-shadow: 0 4px 10px var(--bx-shadow7);
+}
+
+
+/* 'Back to Form' Button (hover effect - gradient) */
+
+.back-btn:hover {
+  background: var(--gradient1);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px var(--bx-shadow6);
+}
+
+
+/* Thank You Page - Responsive Design */
+@media (max-width: 600px) {
+  .thankyou-container {
+    width: 90%;
+    padding: 1.5rem;
+  }
+}
