@@ -1,53 +1,47 @@
 /* Global CSS Variables */
 
 :root {
---background-color1: #000000;
---background-color2: rgba(255, 255, 255, 0.10); 
---background-color3: rgba(255, 255, 255, 0.2);
---background-color4: rgba(0, 0, 0, 0.368);
+  --background-color1: #000000;
+  --background-color2: rgba(255, 255, 255, 0.1);
+  --background-color3: rgba(255, 255, 255, 0.2);
+  --background-color4: rgba(0, 0, 0, 0.368);
 
+  --nav-bg: rgba(255, 255, 255, 0.1);
+  --nav-border: rgba(255, 255, 255, 0.25);
+  --gradient1: linear-gradient(90deg, #ff8a00, #d12323);
+  --gradient2: linear-gradient(#000000, #000000);
 
---nav-bg: rgba(255, 255, 255, 0.1);
---nav-border: rgba(255, 255, 255, 0.25);
---gradient1: linear-gradient(90deg, #ff8a00, #d12323);
---gradient2: linear-gradient(#000000, #000000);
+  --accent-color: #ff8a00;
 
+  --font-color1: rgb(203, 203, 203);
+  --font-color2: #f3950b;
+  --font-color3: #d12323;
+  --font-color4: #fff;
+  --font-color5: rgba(255, 255, 255, 0.411);
 
---accent-color: #ff8a00;
+  --drop-shadow1: drop-shadow(0 0 6px #f3950b) drop-shadow(0 0 10px #d12323);
+  --bx-shadow1: rgba(0, 0, 0, 0.302);
+  --bx-shadow2: rgba(255, 255, 255, 0.15);
+  --bx-shadow3: rgba(241, 100, 0, 0.4);
+  --bx-shadow4: rgba(209, 35, 35, 0.5);
+  --bx-shadow5: rgba(209, 20, 20, 0.616);
+  --bx-shadow6: rgba(243, 150, 11, 0.616);
+  --bx-shadow7: rgba(209, 35, 35, 0.197);
 
---font-color1: #fff;
---font-color2: #f3950b;
---font-color3: #d12323;
---font-color4: #e3dfe3;
---font-color5: rgba(255, 255, 255, 0.6);
-
---drop-shadow1:drop-shadow(0 0 6px #f3950b) drop-shadow(0 0 10px #d12323);
---bx-shadow1: rgba(0, 0, 0, 0.302);
---bx-shadow2: rgba(255, 255, 255, 0.15);
---bx-shadow3: rgba(241, 100, 0, 0.4);
---bx-shadow4: rgba(209, 35, 35, 0.5);
---bx-shadow5: rgba(209, 20, 20, 0.616);
---bx-shadow6: rgba(243, 150, 11, 0.616);
---bx-shadow7: rgba(209, 35, 35, 0.197);
-
-
---bd-color1: rgba(255, 255, 255, 0.2);
---bd-color2: rgb(204, 204, 204);
---bd-color3: rgba(255, 255, 255, 0.5);
---bd-color4: #f3950b;
---bd-bottom1: rgba(255, 255, 255, 0.15);
-
-
+  --bd-color1: rgba(255, 255, 255, 0.2);
+  --bd-color2: rgb(204, 204, 204);
+  --bd-color3: rgba(255, 255, 255, 0.5);
+  --bd-color4: #f3950b;
+  --bd-bottom1: rgba(255, 255, 255, 0.15);
 }
 
 /* General Reset and Font */
 * {
   box-sizing: border-box;
-  font-family:Inter, system-ui, sans-serif; 
+  font-family: Inter, system-ui, sans-serif;
   margin: 0;
   padding: 0;
 }
-
 
 body {
   display: flex;
@@ -58,7 +52,7 @@ body {
   background-color: var(--background-color1);
 }
 
-                        /* NAVIGATION */
+/* NAVIGATION */
 
 .navbar {
   width: 100%;
@@ -76,13 +70,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
 }
 
 /* JOMACS Logo */
 .header_logo img {
   display: block;
-  
 }
 
 /* JOMACS Logo (hover pop effect) */
@@ -94,8 +86,6 @@ body {
   transform: scale(1.1);
   filter: var(--drop-shadow1);
 }
-
-
 
 /* Navigation Links */
 .nav-links {
@@ -109,7 +99,7 @@ body {
 }
 
 .nav-links a {
-  color: var(--font-color1);
+  color: var(--font-color4);
   position: relative;
   text-decoration: none;
   font-weight: 500;
@@ -133,7 +123,7 @@ body {
   width: 0%;
   height: 2px;
   bottom: -4px;
- background: var(--gradient1);
+  background: var(--gradient1);
   transition: width 0.5s ease;
 }
 
@@ -158,9 +148,7 @@ body {
   transition: all 0.3s ease;
 }
 
-
-
-                              /* FORM */        
+/* FORM */
 /* ================================================================ */
 
 /* Form Conatiner (With Blur Effect) */
@@ -170,33 +158,29 @@ body {
   border-radius: 12px;
   max-width: 100%;
   background: var(--background-color2);
-  border: 1px solid var(--bd-color1); 
+  border: 1px solid var(--bd-color1);
   box-shadow: 0 4px 20px var(--bx-shadow2);
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-
-
 
 /* Form Title */
 
 h2 {
   text-align: center;
-  color: var(--font-color1);
+  color: var(--font-color4);
   margin-bottom: 1.5rem;
 }
-
 
 /* Gradient Effect for Text */
 
 .gradient-text {
   background: var(--gradient1);
-  background-clip: text; 
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: bold; 
+  font-weight: bold;
 }
-
 
 /* Form Layout */
 form {
@@ -207,7 +191,7 @@ form {
 /* Fieldset */
 
 fieldset {
-  border: .8px solid var(--bd-color1);
+  border: 0.8px solid var(--bd-color1);
   border-radius: 8px;
   padding: 1rem;
   margin-bottom: 1rem;
@@ -218,7 +202,7 @@ fieldset {
 legend {
   font-weight: bold;
   text-align: center;
-  color: var(--font-color1);
+  color: var(--font-color4);
 }
 
 /* Labels */
@@ -230,7 +214,7 @@ label {
   color: var(--font-color1);
 }
 
-/* Inputs */
+/* INPUTS */
 
 input[type="text"],
 input[type="email"],
@@ -244,18 +228,8 @@ select {
   border-radius: 10px;
   transition: border-color 0.3s ease;
   font-size: 1rem;
-  background-color:  var(--background-color3);
+  background-color: var(--background-color3);
 }
-
-
-/* Input (Placeholder) */
-
-input::placeholder
- {
-  color: var(--font-color5); 
-  transition: all 0.3s ease;
-}
-
 
 /* Input - styling (gradient effect) */
 
@@ -263,14 +237,18 @@ input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
-input[type="date"]:focus
- {
+input[type="date"]:focus {
   outline: none;
   border: 2px solid transparent;
-  color: var(--font-color1);
-  background:
-    var(--gradient2) padding-box,
-    var(--gradient1) border-box;
+  color: var(--font-color4);
+  background: var(--gradient2) padding-box, var(--gradient1) border-box;
+}
+
+/* Input (Placeholder) */
+
+input::placeholder {
+  color: var(--font-color4);
+  transition: all 0.3s ease;
 }
 
 /* Input (Placeholder) - styling (gradient effect)*/
@@ -283,8 +261,24 @@ input:focus::placeholder {
   transition: color 0.5s ease;
 }
 
+/* Input Text (all input text colors uniform) */
 
+input,
+select {
+  color: var(--font-color4) !important;
+  -webkit-text-fill-color: var(--font-color4) !important;
+}
 
+/* Input Text (prevent Chrome's yellow autofill background) */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px var(--background-color3) inset !important;
+  -webkit-text-fill-color: var(--font-color4) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
 
 /* DATE FIELD*/
 
@@ -298,7 +292,7 @@ input[type="date"] {
   transition: all 0.4s ease;
   font-size: 1rem;
   cursor: pointer;
-  background-color: var(--background-color3) ;
+  background-color: var(--background-color3);
   color: var(--font-color1);
 }
 
@@ -309,14 +303,13 @@ input[type="date"]::-webkit-datetime-edit-text,
 input[type="date"]::-webkit-datetime-edit-month-field,
 input[type="date"]::-webkit-datetime-edit-day-field,
 input[type="date"]::-webkit-datetime-edit-year-field {
-  
-  color: var(--font-color5) ;
+  color: var(--font-color5);
 }
 
-          /* Calendar icon - styling */
+/* Calendar icon - styling */
 
 input[type="date"]::-webkit-calendar-picker-indicator {
-  filter: invert(75%) brightness(85%); 
+  filter: invert(75%) brightness(85%);
   opacity: 0.7;
   cursor: pointer;
   transition: filter 0.3s ease, opacity 0.3s ease;
@@ -325,7 +318,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /*Calendar Icon (hover & focus effect) */
 input[type="date"]:hover::-webkit-calendar-picker-indicator,
 input[type="date"]:focus::-webkit-calendar-picker-indicator {
-  filter: invert(86%) sepia(75%) saturate(250%) hue-rotate(5deg) brightness(110%);
+  filter: invert(86%) sepia(75%) saturate(250%) hue-rotate(5deg)
+    brightness(110%);
   opacity: 1;
 }
 
@@ -334,10 +328,7 @@ input[type="date"]:focus {
   outline: none;
   border: 2px solid transparent;
   color: var(--font-color1);
-  background:
-    var(--gradient2) padding-box,
-    var(--gradient1) border-box;
-
+  background: var(--gradient2) padding-box, var(--gradient1) border-box;
 }
 
 /* Date Text (On Focus)*/
@@ -351,12 +342,11 @@ input[type="date"]:focus::-webkit-datetime-edit-year-field {
   -webkit-text-fill-color: transparent;
 }
 
-                  /* GENDER */
-
+/* GENDER */
 
 /* Radio Buttons */
 input[type="radio"] {
-  appearance: none; 
+  appearance: none;
   outline: none;
   background: transparent;
   vertical-align: middle;
@@ -389,7 +379,7 @@ input[type="radio"]:checked {
 
 .gender-group {
   margin-top: 1.5rem;
-  color: var(--font-color1)
+  color: var(--font-color4);
 }
 
 .gender-group span {
@@ -402,32 +392,28 @@ input[type="radio"]:checked {
   margin-right: 1rem;
 }
 
-
-
 /* MEMBERSHIP TYPE (Dropdown) */
 
 select {
-color: var(--font-color5);
-cursor: default;
+  color: var(--font-color5);
+  cursor: default;
 }
 
 /* Membership Type (Dropdown) (focus - gradient effect)  */
 
 select:focus {
   border: 2px solid transparent;
-   background:
-    var(--gradient2) padding-box,
-    var(--gradient1) border-box;
-   color: var(--font-color1); 
+  background: var(--gradient2) padding-box, var(--gradient1) border-box;
+  color: var(--font-color1);
   outline: none;
 }
 
 /* Membership Type (Dropdown Options) */
 select:focus option {
-appearance: none;
-cursor: pointer;
+  appearance: none;
+  cursor: pointer;
   background: var(--background-color1);
-  color: var(--font-color1);
+  color: var(--font-color4);
 }
 
 /* Membership Type (Dropdown) (focus effect - gradient )  */
@@ -435,12 +421,10 @@ select:hover,
 select:focus {
   cursor: pointer;
   border: 1px solid transparent;
-  color:var(--font-color1);
+  color: var(--font-color4);
   background-image: var(--gradient1);
   box-shadow: 0 0 10px var(--bx-shadow3);
 }
-
-
 
 /* Newsletter Subscription (Checkbox) */
 
@@ -482,17 +466,15 @@ input[type="checkbox"]:checked {
 
 /* Checkbox (Checkmark) */
 input[type="checkbox"]:checked::after {
-  content: '✔';
+  content: "✔";
   font-size: 12px;
   position: absolute;
   top: 1px;
   left: 3px;
-  color: var(--font-color1);
+  color: var(--font-color4);
 }
 
-
-                        /*BUTTONS*/
-
+/*BUTTONS*/
 
 /* Buttons (General Styling) */
 
@@ -511,14 +493,14 @@ button {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: var(--font-color1);
+  color: var(--font-color4);
 }
 
 /* Submit Button (gradient effect)*/
 
 button[type="submit"] {
- background-image: var(--gradient1);
-  box-shadow: 0 4px 10px var(--bx-shadow7) ;
+  background-image: var(--gradient1);
+  box-shadow: 0 4px 10px var(--bx-shadow7);
 }
 
 /* Submit Button (hover effect -gradient)*/
@@ -531,12 +513,12 @@ button[type="submit"]:hover {
 
 /* Reset Button */
 
- button[type="reset"] {
+button[type="reset"] {
   position: relative;
-  border: none; 
+  border: none;
   background: transparent;
-  color: var(--font-color1);
-  border-radius: 10px; 
+  color: var(--font-color4);
+  border-radius: 10px;
   padding: 0.8rem 1.2rem;
   font-size: 1rem;
   font-weight: 600;
@@ -552,17 +534,13 @@ button[type="reset"]::before {
   inset: 0;
   border-radius: 10px;
   padding: 1.5px;
-  background:  var(--gradient1);
-  mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
+  background: var(--gradient1);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   mask-composite: exclude;
 
-  -webkit-mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
-          mask-composite: exclude;
+  mask-composite: exclude;
   pointer-events: none;
 }
 
@@ -573,8 +551,6 @@ button[type="reset"]:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 15px var(--bx-shadow5);
 }
-
-
 
 /* Responsive Design */
 
@@ -608,7 +584,6 @@ button[type="reset"]:hover {
   }
 }
 
-
 /* --- Mobile Styling --- */
 @media (max-width: 600px) {
   .menu-toggle {
@@ -636,12 +611,11 @@ button[type="reset"]:hover {
 
   .nav-links li {
     margin: 10px 0;
-    
   }
 
   .nav-links li a {
     color: var(--font-color4);
-    background: var(--font-color1);
+    background: var(--font-color4);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -661,7 +635,6 @@ button[type="reset"]:hover {
   }
 }
 
-
 /* THANK YOU PAGE*/
 
 .thankyou-container {
@@ -676,17 +649,16 @@ button[type="reset"]:hover {
 }
 
 .thankyou-container h1 {
-  color: var(--font-color1);
+  color: var(--font-color4);
   margin-bottom: 1rem;
   text-align: center;
 }
 
 .thankyou-container p {
-  color: var(--font-color1);
+  color: var(--font-color4);
   margin-bottom: 0.8rem;
   line-height: 1.5;
 }
-
 
 /* Thank You Page ('Back to Form' Button)*/
 
@@ -698,11 +670,10 @@ button[type="reset"]:hover {
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s ease;
-  color: var(--font-color1);
-background: var(--gradient1);
+  color: var(--font-color4);
+  background: var(--gradient1);
   box-shadow: 0 4px 10px var(--bx-shadow7);
 }
-
 
 /* 'Back to Form' Button (hover effect - gradient) */
 
@@ -711,7 +682,6 @@ background: var(--gradient1);
   transform: translateY(-2px);
   box-shadow: 0 6px 15px var(--bx-shadow6);
 }
-
 
 /* Thank You Page - Responsive Design */
 @media (max-width: 600px) {
