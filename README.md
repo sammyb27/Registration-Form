@@ -59,7 +59,7 @@ It features:
 ## 🚀 Live Demo
 
 ✨ **Check it out here:**  
-[https://sammyb27.github.io/registration-form/]
+[https://sammyb27.github.io/Registration-Form/]
 
 ---
 
