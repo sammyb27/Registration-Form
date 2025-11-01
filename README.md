@@ -48,11 +48,14 @@ It features:
 ![JOMACS Thank You Page](./images/screenshot-thankyou.png)
 
 ### Mobile View – Responsive Layout
-![JOMACS Mobile View](./images/screenshot-mobile.png)
+<p align="center">
+  <img src="./images/screenshot-mobile.png" width="300">
+</p>
 
 ### Mobile View – Hamburger Menu Open
-![JOMACS Mobile Menu](./images/screenshot-mobile-menu.png)
-
+<p align="center">
+  <img src="./images/screenshot-mobile-menu.png" width="300">
+</p>
 
 ---
 
