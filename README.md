@@ -61,8 +61,7 @@ It features:
 
 ## 🚀 Live Demo
 
-✨ **Check it out here:**  
-[https://sammyb27.github.io/Registration-Form/]
+✨ **Check it out [here](https://sammyb27.github.io/Registration-Form/)**
 
 ---
 
